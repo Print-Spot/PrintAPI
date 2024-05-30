@@ -1,70 +1,57 @@
-# PrintAPI guide
-!!! Remember to **always** making changes on your personal [forked](https://github.com/Print-Spot/PrintAPI/fork) repository.
+# 🚀 Getting started with Strapi
 
-!!! And also from **other** branch than main (you need to create new branch on your fork fe. development)
+Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
-Every operation need to be executed in node 18
+### `develop`
 
-You can do this by using [nvm(node version manager)](https://github.com/nvm-sh/nvm)
-```bash
-$ nvm use 18
-! Now using node v18.20.2 (npm v10.5.0)
+Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+
 ```
-(works only in this terminal flow)
-
-## Getting started
-You **mustn't** be working on repo version of strapi
-
-### Create strapi project
-```bash
-$ npx create-strapi-app@latest [name] 
-? Choose your installation type (Use arrow keys)
-❯ Quickstart (recommended) 
-  Custom (manual settings) 
-```
-select `quickstart` setup option
-
-### Import newest backup
-```bash
-$ npm run strapi import -- -f [newest_version].tar.gz.enc
-? Please enter an encryption key [input is hidden]
-```
-then provide encryption key should be provided by moderator or placed in pass.txt (same key you should use to export)
-
-### Start project
-```bash 
-$ npm run start
-# or in development (preferred for making changes):
-$ npm run develop
+npm run develop
+# or
+yarn develop
 ```
 
-## Export and Push commit
+### `start`
 
-### Export your changes
-you should export and commit every important (even small) change
-```bash
-$ npm run strapi export -- -f [version explained below \/].tar.gz.enc
-? Please enter an encryption key [input is hidden]
+Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+
 ```
-provide same encryption key again
-
-and paste in backups/
-
-### Version your export 
-Create version of your change by schema below and paste it in VERSIONS.md:
+npm run start
+# or
+yarn start
 ```
-* * *
- - [only versions to deploy].[if big change ++].[if small change ++].tar.gz.enc - description (not too big)
+
+### `build`
+
+Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+
 ```
-Make sure that if you increment value every number after it need to be reset to zero
+npm run build
+# or
+yarn build
+```
 
-0.0.23 => 0.1.0  
+## ⚙️ Deployment
 
-### Create commit
-name commit after previous said version and description
+Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
 
-### Push commit
-just push commit.
+## 📚 Learn more
 
-### Create pull request to main repo
-and wait for approvement and marge
+- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
+- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
+- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
+- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
+- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+
+Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+
+## ✨ Community
+
+- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
+- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
+- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+
+---
+
+<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
