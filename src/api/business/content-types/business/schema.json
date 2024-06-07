@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "businesses",
+  "info": {
+    "singularName": "business",
+    "pluralName": "businesses",
+    "displayName": "Business",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "printers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::printer.printer",
+      "mappedBy": "business"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "business"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2,
+      "unique": true,
+      "maxLength": 64
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 512
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
